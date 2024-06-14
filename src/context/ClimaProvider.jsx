@@ -31,13 +31,16 @@ const ClimaProvider = ({children}) => {
             
             const appId = import.meta.env.VITE_API_KEY
             const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${appId}`
+            // const appId = 'ae7cb98e95258b6ed4862884a93228fa'
+            // const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
             
             const { data } = await axios(url)
             
             const { lat, lon } = data[0]
 
             const urlClima = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`
-        
+            // const urlClima = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`
+
             const { data: clima } = await axios(urlClima)
 
 
