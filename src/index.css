@@ -160,3 +160,21 @@ form {
   justify-content: center;
   gap: 2rem;
 }
+@media screen and (width <= 640px) {
+  main{
+    margin: 1rem;
+  }
+  .contenedor{
+    padding: 2rem;
+  }
+  .dos-columnas{
+    gap: 0;
+  }
+  .dos-columnas > p {
+    margin: 0 auto;
+  }
+  .contenedor.clima > h2{
+    font-size: 2rem;
+    text-align: center;
+  }
+}
